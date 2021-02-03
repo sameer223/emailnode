@@ -24,29 +24,29 @@ router.get('/', function (req, res, next) {
 
     var sendmailreq = "<html>\n\
                         <body>\n\
-                        <p> Name: " +  req.params('name') + "</p>\n\
-                        <p> Email: " +  req.params('email') + "</p>\n\
-                        <p> Query: " +  req.params('msg') + "</p>\n\
-                        <p> Newsletter: " +  req.params('newsletter') + "</p>\n\
+                        <p> Name: " +  req.param('name') + "</p>\n\
+                        <p> Email: " +  req.param('email') + "</p>\n\
+                        <p> Query: " +  req.param('msg') + "</p>\n\
+                        <p> Newsletter: " +  req.param('newsletter') + "</p>\n\
                         </body>\n\
                         </html>";
     var sendmailrevemail = "<html>\n\
                         <body>\n\
                         <h1>Thank you for your query</h1>\n\
                         <h6>We attached your query details details</h6>\n\
-                        <p> Name: " +  req.params('name') + "</p>\n\
-                        <p> Email: " +  req.params('email') + "</p>\n\
-                        <p> Query: " +  req.params('msg') + "</p>\n\
-                        <p> Newsletter: " +  req.params('newsletter') + "</p>\n\
+                        <p> Name: " +  req.param('name') + "</p>\n\
+                        <p> Email: " +  req.param('email') + "</p>\n\
+                        <p> Query: " +  req.param('msg') + "</p>\n\
+                        <p> Newsletter: " +  req.param('newsletter') + "</p>\n\
                        </body>\n\
                        </html>";
 
-    var sender_email = req.params('email');
+    var sender_email = req.param('email');
 
     let mailOptions = {
         from: 'shinigami121999@gmail.com',
         to: 'ranjitkumar448@yahoo.com',
-        subject: "a new query arrived from " +  req.params('email') + "",
+        subject: "a new query arrived from " +  req.param('email') + "",
         html: sendmailreq
     };
 
