@@ -44,8 +44,8 @@ router.get('/', function (req, res, next) {
     var sender_email = req.param('email');
 
     let mailOptions = {
-        from: 'User <username@domain.com>',
-        to: 'ranjitkumar448@yahoo.com',
+        from: 'shinigami121999@gmail.com',
+        to: sender_email,
         subject: "a new query arrived from " +  req.param('email') + "",
         html: sendmailreq
     };
@@ -64,12 +64,12 @@ router.get('/', function (req, res, next) {
     });
 
 
-    transporter.sendMail(mailreverse, (error, info) => {
-        if (error) {
-            return console.log(error);
-        }
-        console.log('Message %s sent: %s', info.messageId, info.response);
-    });
+//     transporter.sendMail(mailreverse, (error, info) => {
+//         if (error) {
+//             return console.log(error);
+//         }
+//         console.log('Message %s sent: %s', info.messageId, info.response);
+//     });
     res.send("email send")
 
 });
