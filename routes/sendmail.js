@@ -6,7 +6,7 @@ let transporter = nodemailer.createTransport({
     service: 'Godaddy',
     host: "smtpout.secureserver.net",  
     secureConnection: true,
-    port: 465
+    port: 465,
     auth: {
         user: 'sells@nityamedhall.com',
         pass: 'Raaj@123456789'
