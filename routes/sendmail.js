@@ -51,7 +51,7 @@ router.get('/', function (req, res, next) {
     };
 
     let mailreverse = {
-        from: 'User <username@domain.com>',
+        from: 'shinigami121999@gmail.com',
         to: sender_email,
         subject: "your query on domain.com",
         html: sendmailrevemail
