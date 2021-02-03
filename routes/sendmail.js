@@ -3,12 +3,12 @@ var express = require('express');
 var router = express.Router();
 const nodemailer = require('nodemailer');
 let transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
+    host: 'smtp.office365.com',
     port: 587,
-    secure: false,
+    secure: true,
     auth: {
-        user: 'shinigami121999@gmail.com',
-        pass: 'Ranjit@1999'
+        user: 'sells@nityamedhall.com',
+        pass: 'Raaj@123456789'
     },
    // tls: { rejectUnauthorized: false }
 });
