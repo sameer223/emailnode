@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 const nodemailer = require('nodemailer');
 let transporter = nodemailer.createTransport({
-    host: 'gmail.com',
+    host: 'gmail',
     port: 25,
     secure: false,
     auth: {
