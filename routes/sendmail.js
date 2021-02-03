@@ -3,15 +3,15 @@ var express = require('express');
 var router = express.Router();
 const nodemailer = require('nodemailer');
 let transporter = nodemailer.createTransport({
-    service: 'Godaddy',
-    host: "smtpout.secureserver.net",  
-    secureConnection: true,
-    port: 465,
+   service: "Office365",
+            host: "smtp.office365.com",  
+            secureConnection: false,
+            port: 25,
     auth: {
         user: 'sells@nityamedhall.com',
         pass: 'Raaj@123456789'
     }
-   // tls: { rejectUnauthorized: false }
+    tls: { rejectUnauthorized: false }
 });
 transporter.verify(function (error, success) {
     if (error) {
